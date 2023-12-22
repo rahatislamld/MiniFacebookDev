@@ -3,15 +3,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20  # Use a supported version (18 or 20)
+      nodejs: 20
     commands:
-      - cd server  # Change to the server directory
-      - npm install  # Install Node.js dependencies
+      - cd server
+      - npm install
 
-  build:
-    commands:
-      - npm run build  # Or your build command for the server
+build:
+  commands:
+    - npm run start
 
 cache:
   paths:
-    - 'server/node_modules/**/*'  # Cache Node.js modules for faster builds
+    - 'server/node_modules/**/*'
