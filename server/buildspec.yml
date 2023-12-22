@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  # Choose a version compatible with your project
+
+  pre_build:
+    commands:
+      - cd server  # Change to the server directory
+      - npm install  # Install Node.js dependencies
+
+  build:
+    commands:
+      - npm test  # Run tests if applicable
+      - npm run build  # Or your build command for the server
+
+cache:
+  paths:
+    - 'server/node_modules/**/*'  # Cache Node.js modules for faster builds
