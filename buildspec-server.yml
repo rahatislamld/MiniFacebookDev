@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14  # Choose a version compatible with your project
+      nodejs: 20  # Choose a version compatible with your project
 
   pre_build:
     commands:
