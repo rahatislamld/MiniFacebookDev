@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - cd client  # Change to the client directory
+      - npm install  # Install Node.js dependencies
+
+  build:
+    commands:
+      - npm run build  # Run the build script
+
+cache:
+  paths:
+    - 'client/node_modules/**/*'  # Cache Node.js modules for faster builds
